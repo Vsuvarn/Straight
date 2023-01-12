@@ -14,10 +14,9 @@ const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
     <Stack.Navigator
-    
+      headerMode="none"
       screenOptions={{
-        header: (props) => <Header {...props} /> 
-        
+        header: props => <Header {...props} />,
       }}
       initialRouteName="Straight">
       <Stack.Screen name="Straight" component={Straight} />
