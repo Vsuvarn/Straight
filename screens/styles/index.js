@@ -18,4 +18,34 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  followButton: {
+    borderColor: '#FFFFFF',
+    borderRadius: 6,
+    paddingHorizontal: widthToDp(5),
+    paddingVertical: heightToDp(0.5),
+    borderWidth: 1,
+  },
+  content: {
+    height: heightToDp(4),
+    justifyContent: 'center',
+  },
+  tumbnail: {
+    height: heightToDp(5),
+    aspectRatio: 1,
+    borderRadius: 10,
+    borderWidth: 2,
+    overflow: 'hidden',
+    borderColor: '#FFFFFF',
+  },
+  tumbnailImg:{height: heightToDp(5), aspectRatio: 1},
+  leftSlide: {
+    height: '40%',
+    flex: 1,
+    // borderWidth: 1,
+    borderColor: 'red',
+    alignSelf: 'flex-end',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    paddingRight:'5%'
+  }
 });

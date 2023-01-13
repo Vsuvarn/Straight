@@ -25,7 +25,7 @@ const StackNavigation = () => {
 };
 
 export default function Navigation() {
-  const state = useSelector(state => state.infoReducer);
+  const state = useSelector(state => state.videoReducer);
   const dispatch = useDispatch();
 
   return (

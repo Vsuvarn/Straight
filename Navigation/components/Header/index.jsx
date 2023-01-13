@@ -8,9 +8,9 @@ function Header() {
   const _handleMore = () => console.log('Shown more');
   return (
     <Appbar.Header>
-      <Appbar.BackAction onPress={_goBack} />
-      <Appbar.Content title="Title" />
-      <Appbar.Action icon="magnify" onPress={_handleSearch} />
+     
+      <Appbar.Content title="Straight" />
+     
       <Appbar.Action icon="dots-vertical" onPress={_handleMore} />
     </Appbar.Header>
   );

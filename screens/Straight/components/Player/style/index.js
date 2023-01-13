@@ -7,9 +7,11 @@ import {
 } from '../../../../styles';
 export default StyleSheet.create({
   playerContainer: {
-    height: heightToDp(96) ,
+    height: heightToDp(96),
     width: fullScreenWidth,
-    borderWidth: 1,
+    borderWidth: 0,
+
+    // backgroundColor: 'white'
   },
   backgroundVideo: {
     position: 'absolute',
@@ -17,6 +19,6 @@ export default StyleSheet.create({
     left: 0,
     bottom: 0,
     right: 0,
-    backgroundColor:'#14202A'
+    backgroundColor: '#14202A',
   },
 });

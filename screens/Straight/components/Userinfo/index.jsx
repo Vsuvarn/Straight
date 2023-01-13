@@ -3,7 +3,7 @@ import {View, Image,TouchableOpacity} from 'react-native';
 import {Text, Avatar, Button} from 'react-native-paper';
 import Style from '../../../styles';
 
-function UserInfo() {
+function UserInfo(props) {
     const [state,setState] = useState(false) 
   return (
     <View style={{paddingHorizontal: '5%'}}>
@@ -12,21 +12,15 @@ function UserInfo() {
           flexDirection: 'row',
           alignItems: 'center',
         }}>
+            {console.log('props===>',props)}
         <Avatar.Image size={35} source={{uri: 'https://i.pravatar.cc/300'}} />
 
         <Text variant="titleSmall" style={{color: '#FFFFFF', marginLeft: '3%'}}>
-          Suntfug134
+          {props.data.id}
         </Text>
         <TouchableOpacity style={{ marginLeft: '4%',}} onPress={() => setState(!state)}>
         <View
-          style={{
-            borderColor: '#FFFFFF',
-            borderRadius: 6,
-            paddingHorizontal: 15,
-            paddingVertical: 5,
-            borderWidth: 1,
-           
-          }}
+          style={Style.followButton}
           >
           <Text variant="bodySmall" style={{color: '#FFFFFF'}}>
             {
@@ -43,11 +37,7 @@ function UserInfo() {
         </Text>
       </View>
       <View
-        style={{
-          height: 30,
-
-          justifyContent: 'center',
-        }}>
+        style={Style.content}>
         <Text variant="titleSmall" style={{color: '#FFFFFF'}}>
           Eu cupidatat nulla cupidatat eu...
         </Text>

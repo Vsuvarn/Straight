@@ -9,23 +9,24 @@ function LeftSlidebuttons() {
   const[state,setState] = useState({is:false,like:10})
   return (
     <View
-      style={{
-        height: '40%',
-        flex: 1,
-        // borderWidth: 1,
-        borderColor: 'red',
-        alignSelf: 'flex-end',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-      }}>
+      style={Style.leftSlide}>
       <View style={{justifyContent: 'center', alignItems: 'center'}}>
         <TouchableOpacity onPress={()=>{
-            setState((oldState)=>{
-                return {
-                    is:!oldState.is,
-                    like:oldState.like + 1
-                }
-            })
+            if (state.is === false) {
+                setState((oldState)=>{
+                    return {
+                        is:!oldState.is,
+                        like:oldState.like + 1
+                    }
+                })
+            }else if (state.is === true) {
+                setState((oldState)=>{
+                    return {
+                        is:!oldState.is,
+                        like:oldState.like - 1
+                    }
+                })
+            }
         }}>
             {
                 state.is ?
@@ -33,7 +34,7 @@ function LeftSlidebuttons() {
                 :
                 <IconM name="cards-heart-outline" size={30} color={'#FFFFFF'} />
             }
-        {/* <IconM name="cards-heart-outline" size={30} color={'#FFFFFF'} /> */}
+       
         </TouchableOpacity>
         <Text variant="labelSmall" style={{color: '#FFFFFF'}}>
         {state.like}
@@ -53,17 +54,10 @@ function LeftSlidebuttons() {
       </View>
       <View>
         <View
-          style={{
-            height: 40,
-            aspectRatio: 1,
-            borderRadius: 10,
-            borderWidth: 2,
-            overflow: 'hidden',
-            borderColor: '#FFFFFF',
-          }}>
+          style={Style.tumbnail}>
           <Image
             source={{uri: 'https://i.pravatar.cc/300'}}
-            style={{height: 40, aspectRatio: 1}}
+            style={Style.tumbnailImg}
             resizeMode="contain"
           />
         </View>
