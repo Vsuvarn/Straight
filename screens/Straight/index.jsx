@@ -10,12 +10,12 @@ let data = [
   {id: 3, src: require('../../assets/video3.mp4'),user:{id:'thetechchap'}},
   {id: 4, src: require('../../assets/video4.mp4'),user:{id:'amirinalooii'}},
 ];
+var i = 1;
 function Straight() {
-  const [currentIndex, viewableItems] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const ref = useRef()
-  useEffect(()=>{
-    console.log('ref ',ref)
-  },[])
+ 
+  
   return (
     <>
       <View >
@@ -32,8 +32,10 @@ function Straight() {
           keyExtractor={item => {
             return item.id;
           }}
-         
-          
+          ItemSeparatorComponent={()=>{
+            return <></>
+          }}
+                    
           ListFooterComponent={() => {
             return <></>;
           }}
